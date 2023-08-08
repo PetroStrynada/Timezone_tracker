@@ -1,0 +1,607 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FB18BC952A824B3A00DACC07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB18BC942A824B3A00DACC07 /* AppDelegate.swift */; };
+		FB18BC972A824B3A00DACC07 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB18BC962A824B3A00DACC07 /* SceneDelegate.swift */; };
+		FB18BC992A824B3A00DACC07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB18BC982A824B3A00DACC07 /* ViewController.swift */; };
+		FB18BC9C2A824B3A00DACC07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB18BC9A2A824B3A00DACC07 /* Main.storyboard */; };
+		FB18BC9E2A824B3C00DACC07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB18BC9D2A824B3C00DACC07 /* Assets.xcassets */; };
+		FB18BCA12A824B3C00DACC07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB18BC9F2A824B3C00DACC07 /* LaunchScreen.storyboard */; };
+		FB18BCAC2A824B3D00DACC07 /* Timezone_trackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB18BCAB2A824B3D00DACC07 /* Timezone_trackerTests.swift */; };
+		FB18BCB62A824B3D00DACC07 /* Timezone_trackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB18BCB52A824B3D00DACC07 /* Timezone_trackerUITests.swift */; };
+		FB18BCB82A824B3D00DACC07 /* Timezone_trackerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB18BCB72A824B3D00DACC07 /* Timezone_trackerUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FB18BCA82A824B3D00DACC07 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB18BC892A824B3A00DACC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB18BC902A824B3A00DACC07;
+			remoteInfo = Timezone_tracker;
+		};
+		FB18BCB22A824B3D00DACC07 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB18BC892A824B3A00DACC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB18BC902A824B3A00DACC07;
+			remoteInfo = Timezone_tracker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FB18BC912A824B3A00DACC07 /* Timezone_tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Timezone_tracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB18BC942A824B3A00DACC07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FB18BC962A824B3A00DACC07 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FB18BC982A824B3A00DACC07 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FB18BC9B2A824B3A00DACC07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FB18BC9D2A824B3C00DACC07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FB18BCA02A824B3C00DACC07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FB18BCA22A824B3C00DACC07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB18BCA72A824B3D00DACC07 /* Timezone_trackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Timezone_trackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB18BCAB2A824B3D00DACC07 /* Timezone_trackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timezone_trackerTests.swift; sourceTree = "<group>"; };
+		FB18BCB12A824B3D00DACC07 /* Timezone_trackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Timezone_trackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB18BCB52A824B3D00DACC07 /* Timezone_trackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timezone_trackerUITests.swift; sourceTree = "<group>"; };
+		FB18BCB72A824B3D00DACC07 /* Timezone_trackerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timezone_trackerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FB18BC8E2A824B3A00DACC07 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB18BCA42A824B3D00DACC07 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB18BCAE2A824B3D00DACC07 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FB18BC882A824B3A00DACC07 = {
+			isa = PBXGroup;
+			children = (
+				FB18BC932A824B3A00DACC07 /* Timezone_tracker */,
+				FB18BCAA2A824B3D00DACC07 /* Timezone_trackerTests */,
+				FB18BCB42A824B3D00DACC07 /* Timezone_trackerUITests */,
+				FB18BC922A824B3A00DACC07 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FB18BC922A824B3A00DACC07 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FB18BC912A824B3A00DACC07 /* Timezone_tracker.app */,
+				FB18BCA72A824B3D00DACC07 /* Timezone_trackerTests.xctest */,
+				FB18BCB12A824B3D00DACC07 /* Timezone_trackerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FB18BC932A824B3A00DACC07 /* Timezone_tracker */ = {
+			isa = PBXGroup;
+			children = (
+				FB18BC942A824B3A00DACC07 /* AppDelegate.swift */,
+				FB18BC962A824B3A00DACC07 /* SceneDelegate.swift */,
+				FB18BC982A824B3A00DACC07 /* ViewController.swift */,
+				FB18BC9A2A824B3A00DACC07 /* Main.storyboard */,
+				FB18BC9D2A824B3C00DACC07 /* Assets.xcassets */,
+				FB18BC9F2A824B3C00DACC07 /* LaunchScreen.storyboard */,
+				FB18BCA22A824B3C00DACC07 /* Info.plist */,
+			);
+			path = Timezone_tracker;
+			sourceTree = "<group>";
+		};
+		FB18BCAA2A824B3D00DACC07 /* Timezone_trackerTests */ = {
+			isa = PBXGroup;
+			children = (
+				FB18BCAB2A824B3D00DACC07 /* Timezone_trackerTests.swift */,
+			);
+			path = Timezone_trackerTests;
+			sourceTree = "<group>";
+		};
+		FB18BCB42A824B3D00DACC07 /* Timezone_trackerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FB18BCB52A824B3D00DACC07 /* Timezone_trackerUITests.swift */,
+				FB18BCB72A824B3D00DACC07 /* Timezone_trackerUITestsLaunchTests.swift */,
+			);
+			path = Timezone_trackerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FB18BC902A824B3A00DACC07 /* Timezone_tracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB18BCBB2A824B3D00DACC07 /* Build configuration list for PBXNativeTarget "Timezone_tracker" */;
+			buildPhases = (
+				FB18BC8D2A824B3A00DACC07 /* Sources */,
+				FB18BC8E2A824B3A00DACC07 /* Frameworks */,
+				FB18BC8F2A824B3A00DACC07 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Timezone_tracker;
+			productName = Timezone_tracker;
+			productReference = FB18BC912A824B3A00DACC07 /* Timezone_tracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FB18BCA62A824B3D00DACC07 /* Timezone_trackerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB18BCBE2A824B3D00DACC07 /* Build configuration list for PBXNativeTarget "Timezone_trackerTests" */;
+			buildPhases = (
+				FB18BCA32A824B3D00DACC07 /* Sources */,
+				FB18BCA42A824B3D00DACC07 /* Frameworks */,
+				FB18BCA52A824B3D00DACC07 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FB18BCA92A824B3D00DACC07 /* PBXTargetDependency */,
+			);
+			name = Timezone_trackerTests;
+			productName = Timezone_trackerTests;
+			productReference = FB18BCA72A824B3D00DACC07 /* Timezone_trackerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FB18BCB02A824B3D00DACC07 /* Timezone_trackerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB18BCC12A824B3D00DACC07 /* Build configuration list for PBXNativeTarget "Timezone_trackerUITests" */;
+			buildPhases = (
+				FB18BCAD2A824B3D00DACC07 /* Sources */,
+				FB18BCAE2A824B3D00DACC07 /* Frameworks */,
+				FB18BCAF2A824B3D00DACC07 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FB18BCB32A824B3D00DACC07 /* PBXTargetDependency */,
+			);
+			name = Timezone_trackerUITests;
+			productName = Timezone_trackerUITests;
+			productReference = FB18BCB12A824B3D00DACC07 /* Timezone_trackerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FB18BC892A824B3A00DACC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					FB18BC902A824B3A00DACC07 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					FB18BCA62A824B3D00DACC07 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = FB18BC902A824B3A00DACC07;
+					};
+					FB18BCB02A824B3D00DACC07 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = FB18BC902A824B3A00DACC07;
+					};
+				};
+			};
+			buildConfigurationList = FB18BC8C2A824B3A00DACC07 /* Build configuration list for PBXProject "Timezone_tracker" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FB18BC882A824B3A00DACC07;
+			productRefGroup = FB18BC922A824B3A00DACC07 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FB18BC902A824B3A00DACC07 /* Timezone_tracker */,
+				FB18BCA62A824B3D00DACC07 /* Timezone_trackerTests */,
+				FB18BCB02A824B3D00DACC07 /* Timezone_trackerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FB18BC8F2A824B3A00DACC07 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB18BCA12A824B3C00DACC07 /* LaunchScreen.storyboard in Resources */,
+				FB18BC9E2A824B3C00DACC07 /* Assets.xcassets in Resources */,
+				FB18BC9C2A824B3A00DACC07 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB18BCA52A824B3D00DACC07 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB18BCAF2A824B3D00DACC07 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FB18BC8D2A824B3A00DACC07 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB18BC992A824B3A00DACC07 /* ViewController.swift in Sources */,
+				FB18BC952A824B3A00DACC07 /* AppDelegate.swift in Sources */,
+				FB18BC972A824B3A00DACC07 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB18BCA32A824B3D00DACC07 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB18BCAC2A824B3D00DACC07 /* Timezone_trackerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB18BCAD2A824B3D00DACC07 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB18BCB82A824B3D00DACC07 /* Timezone_trackerUITestsLaunchTests.swift in Sources */,
+				FB18BCB62A824B3D00DACC07 /* Timezone_trackerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FB18BCA92A824B3D00DACC07 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FB18BC902A824B3A00DACC07 /* Timezone_tracker */;
+			targetProxy = FB18BCA82A824B3D00DACC07 /* PBXContainerItemProxy */;
+		};
+		FB18BCB32A824B3D00DACC07 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FB18BC902A824B3A00DACC07 /* Timezone_tracker */;
+			targetProxy = FB18BCB22A824B3D00DACC07 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FB18BC9A2A824B3A00DACC07 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB18BC9B2A824B3A00DACC07 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FB18BC9F2A824B3C00DACC07 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB18BCA02A824B3C00DACC07 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FB18BCB92A824B3D00DACC07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FB18BCBA2A824B3D00DACC07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FB18BCBC2A824B3D00DACC07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 76Y8THNQ6B;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Timezone_tracker/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pullupladder.Timezone-tracker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FB18BCBD2A824B3D00DACC07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 76Y8THNQ6B;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Timezone_tracker/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pullupladder.Timezone-tracker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FB18BCBF2A824B3D00DACC07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 76Y8THNQ6B;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pullupladder.Timezone-trackerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Timezone_tracker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Timezone_tracker";
+			};
+			name = Debug;
+		};
+		FB18BCC02A824B3D00DACC07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 76Y8THNQ6B;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pullupladder.Timezone-trackerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Timezone_tracker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Timezone_tracker";
+			};
+			name = Release;
+		};
+		FB18BCC22A824B3D00DACC07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 76Y8THNQ6B;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pullupladder.Timezone-trackerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Timezone_tracker;
+			};
+			name = Debug;
+		};
+		FB18BCC32A824B3D00DACC07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 76Y8THNQ6B;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pullupladder.Timezone-trackerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Timezone_tracker;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FB18BC8C2A824B3A00DACC07 /* Build configuration list for PBXProject "Timezone_tracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB18BCB92A824B3D00DACC07 /* Debug */,
+				FB18BCBA2A824B3D00DACC07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB18BCBB2A824B3D00DACC07 /* Build configuration list for PBXNativeTarget "Timezone_tracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB18BCBC2A824B3D00DACC07 /* Debug */,
+				FB18BCBD2A824B3D00DACC07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB18BCBE2A824B3D00DACC07 /* Build configuration list for PBXNativeTarget "Timezone_trackerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB18BCBF2A824B3D00DACC07 /* Debug */,
+				FB18BCC02A824B3D00DACC07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB18BCC12A824B3D00DACC07 /* Build configuration list for PBXNativeTarget "Timezone_trackerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB18BCC22A824B3D00DACC07 /* Debug */,
+				FB18BCC32A824B3D00DACC07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FB18BC892A824B3A00DACC07 /* Project object */;
+}
