@@ -16,6 +16,7 @@
 		FB18BCAC2A824B3D00DACC07 /* Timezone_trackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB18BCAB2A824B3D00DACC07 /* Timezone_trackerTests.swift */; };
 		FB18BCB62A824B3D00DACC07 /* Timezone_trackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB18BCB52A824B3D00DACC07 /* Timezone_trackerUITests.swift */; };
 		FB18BCB82A824B3D00DACC07 /* Timezone_trackerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB18BCB72A824B3D00DACC07 /* Timezone_trackerUITestsLaunchTests.swift */; };
+		FB18BCC52A82704800DACC07 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB18BCC42A82704800DACC07 /* Friend.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		FB18BCB12A824B3D00DACC07 /* Timezone_trackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Timezone_trackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB18BCB52A824B3D00DACC07 /* Timezone_trackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timezone_trackerUITests.swift; sourceTree = "<group>"; };
 		FB18BCB72A824B3D00DACC07 /* Timezone_trackerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timezone_trackerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FB18BCC42A82704800DACC07 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				FB18BC942A824B3A00DACC07 /* AppDelegate.swift */,
 				FB18BC962A824B3A00DACC07 /* SceneDelegate.swift */,
 				FB18BC982A824B3A00DACC07 /* ViewController.swift */,
+				FB18BCC42A82704800DACC07 /* Friend.swift */,
 				FB18BC9A2A824B3A00DACC07 /* Main.storyboard */,
 				FB18BC9D2A824B3C00DACC07 /* Assets.xcassets */,
 				FB18BC9F2A824B3C00DACC07 /* LaunchScreen.storyboard */,
@@ -261,6 +264,7 @@
 				FB18BC992A824B3A00DACC07 /* ViewController.swift in Sources */,
 				FB18BC952A824B3A00DACC07 /* AppDelegate.swift in Sources */,
 				FB18BC972A824B3A00DACC07 /* SceneDelegate.swift in Sources */,
+				FB18BCC52A82704800DACC07 /* Friend.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
