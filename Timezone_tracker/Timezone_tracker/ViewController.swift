@@ -16,7 +16,7 @@ class ViewController: UITableViewController {
 
         loadData()
 
-        title = "Friend zone"
+        title = "Friend Zone"
 
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addFriend))
     }
@@ -43,6 +43,10 @@ class ViewController: UITableViewController {
         cell.contentConfiguration = content
 
         return cell
+    }
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        configure(friend: friends[indexPath.row], position: indexPath.row)
     }
 
     func loadData() {
@@ -72,7 +76,22 @@ class ViewController: UITableViewController {
         friends.append(friend)
         tableView.insertRows(at: [IndexPath(row: friends.count - 1, section: 0)], with: .automatic)
         saveData()
+
+        configure(friend: friend, position: friends.count - 1)
     }
+
+    func configure(friend: Friend, position: Int) {
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "FriendViewController") as? FriendViewController else {
+            fatalError("Unable to create FriendViewController")
+        }
+
+        vc.delegate = self
+        vc.friend = friend
+        navigationController?.pushViewController(vc, animated: true)
+
+
+    }
+
 
 }
 
