@@ -14,6 +14,11 @@ class FriendViewController: UITableViewController {
     var timeZones = [TimeZone]()
     var selectedTimeZone = 0
 
+    var nameEditionCell: TextTableViewCell? {
+        let indexPath = IndexPath(row: 0, section: 0)
+        return tableView.cellForRow(at: indexPath) as? TextTableViewCell
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -92,5 +97,21 @@ class FriendViewController: UITableViewController {
 
             return cell
         }
+    }
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 0 {
+            startEditingName()
+        } else {
+            selectRow(at: indexPath)
+        }
+    }
+
+    func startEditingName() {
+        nameEditionCell?.textField.becomeFirstResponder()
+    }
+
+    func selectRow(at indexPath: IndexPath) {
+        nameEditionCell?.textField.resignFirstResponder()
     }
 }
