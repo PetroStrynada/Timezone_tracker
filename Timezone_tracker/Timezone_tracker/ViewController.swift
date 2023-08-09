@@ -88,8 +88,6 @@ class ViewController: UITableViewController {
         vc.delegate = self
         vc.friend = friend
         navigationController?.pushViewController(vc, animated: true)
-
-
     }
 
 
