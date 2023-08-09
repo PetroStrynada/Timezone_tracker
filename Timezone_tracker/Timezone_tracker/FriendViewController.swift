@@ -85,7 +85,8 @@ class FriendViewController: UITableViewController {
             content.text = timeZone.identifier
 
             let timeDifference = timeZone.secondsFromGMT(for: Date())
-            content.secondaryText = String(timeDifference)
+            //content.secondaryText = String(timeDifference)
+            content.secondaryText = timeDifference.timeString()
 
             cell.contentConfiguration = content
 
