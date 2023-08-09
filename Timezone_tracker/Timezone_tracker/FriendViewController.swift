@@ -43,7 +43,7 @@ class FriendViewController: UITableViewController {
             }
         }
 
-        selectedTimeZone = timeZones.index(of: friend.timeZone) ?? 0
+        selectedTimeZone = timeZones.firstIndex(of: friend.timeZone) ?? 0
     }
 
     @IBAction func nameChanged(_ sender: UITextField) {
