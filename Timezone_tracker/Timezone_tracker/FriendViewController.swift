@@ -113,5 +113,19 @@ class FriendViewController: UITableViewController {
 
     func selectRow(at indexPath: IndexPath) {
         nameEditionCell?.textField.resignFirstResponder()
+
+        for cell in tableView.visibleCells {
+            //unchecking cells
+            cell.accessoryType = .none
+        }
+
+        selectedTimeZone = indexPath.row
+        friend.timeZone = timeZones[indexPath.row]
+
+        let selected = tableView.cellForRow(at: indexPath)
+        selected?.accessoryType = .checkmark
+
+        //for gray flash
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
