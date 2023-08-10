@@ -46,7 +46,13 @@ class FriendViewController: UITableViewController {
         selectedTimeZone = timeZones.firstIndex(of: friend.timeZone) ?? 0
     }
 
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        delegate?.updateFriend(friend: friend)
+    }
+
     @IBAction func nameChanged(_ sender: UITextField) {
+        friend.name = sender.text ?? ""
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {

@@ -3,7 +3,7 @@
 //  Timezone_tracker
 //
 //  Created by Petro Strynada on 08.08.2023.
-//
+
 
 import UIKit
 
@@ -21,5 +21,5 @@ class TextTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
-    
+
 }

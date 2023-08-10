@@ -73,8 +73,7 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                             <connections>
-                                                <action selector="nameChanged:" destination="FAQ-JO-U25" eventType="editingChanged" id="EhE-xr-I6K"/>
-                                                <action selector="nameChanged:" destination="ij4-h2-XUX" eventType="editingChanged" id="RhJ-k9-l8i"/>
+                                                <action selector="nameChanged:" destination="FAQ-JO-U25" eventType="editingChanged" id="eB8-9y-eae"/>
                                             </connections>
                                         </textField>
                                     </subviews>
