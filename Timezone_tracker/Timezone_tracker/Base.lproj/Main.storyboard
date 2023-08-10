@@ -56,25 +56,24 @@
         <scene sceneID="4XL-po-pVh">
             <objects>
                 <tableViewController storyboardIdentifier="FriendViewController" id="FAQ-JO-U25" customClass="FriendViewController" customModule="Timezone_tracker" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="fhL-Mj-EXH">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="fhL-Mj-EXH">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Name" id="ij4-h2-XUX" customClass="TextTableViewCell" customModule="Timezone_tracker" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="55.333332061767578" width="393" height="51.333332061767578"/>
+                                <rect key="frame" x="0.0" y="55.333332061767578" width="393" height="51.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ij4-h2-XUX" id="xaF-tH-fjT">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="51.333332061767578"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="51.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="John Appleseed" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="pt6-nt-WYL">
-                                            <rect key="frame" x="16" y="15.999999999999998" width="361" height="19.333333333333329"/>
+                                            <rect key="frame" x="16" y="16" width="361" height="19.666666666666671"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                             <connections>
-                                                <action selector="nameChanged:" destination="FAQ-JO-U25" eventType="editingChanged" id="EhE-xr-I6K"/>
-                                                <action selector="nameChanged:" destination="ij4-h2-XUX" eventType="editingChanged" id="RhJ-k9-l8i"/>
+                                                <action selector="nameChanged:" destination="FAQ-JO-U25" eventType="editingChanged" id="eB8-9y-eae"/>
                                             </connections>
                                         </textField>
                                     </subviews>
@@ -90,7 +89,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TimeZone" textLabel="7Bd-dg-jG2" detailTextLabel="uiJ-Jv-WvR" style="IBUITableViewCellStyleSubtitle" id="ySI-15-hc0">
-                                <rect key="frame" x="0.0" y="106.66666412353516" width="393" height="43.666667938232422"/>
+                                <rect key="frame" x="0.0" y="107" width="393" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ySI-15-hc0" id="9SY-hb-JKq">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>

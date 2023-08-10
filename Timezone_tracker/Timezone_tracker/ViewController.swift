@@ -8,8 +8,8 @@
 import UIKit
 
 class ViewController: UITableViewController {
-
     var friends = [Friend]()
+    var selectedFriend: Int? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,13 +85,19 @@ class ViewController: UITableViewController {
             fatalError("Unable to create FriendViewController")
         }
 
+        selectedFriend = position
         vc.delegate = self
         vc.friend = friend
         navigationController?.pushViewController(vc, animated: true)
-
-
     }
 
+    func updateFriend(friend: Friend) {
+        guard let selectedFriend = selectedFriend else { return }
+
+        friends[selectedFriend] = friend
+        tableView.reloadData()
+        saveData()
+    }
 
 }
 

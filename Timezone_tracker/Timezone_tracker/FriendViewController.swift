@@ -43,10 +43,16 @@ class FriendViewController: UITableViewController {
             }
         }
 
-        selectedTimeZone = timeZones.index(of: friend.timeZone) ?? 0
+        selectedTimeZone = timeZones.firstIndex(of: friend.timeZone) ?? 0
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        delegate?.updateFriend(friend: friend)
     }
 
     @IBAction func nameChanged(_ sender: UITextField) {
+        friend.name = sender.text ?? ""
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -82,10 +88,10 @@ class FriendViewController: UITableViewController {
             let timeZone = timeZones[indexPath.row]
             var content = cell.defaultContentConfiguration()
 
-            content.text = timeZone.identifier
+            content.text = timeZone.identifier.replacingOccurrences(of: "_", with: " ")
 
             let timeDifference = timeZone.secondsFromGMT(for: Date())
-            content.secondaryText = String(timeDifference)
+            content.secondaryText = timeDifference.timeString()
 
             cell.contentConfiguration = content
 
@@ -113,5 +119,19 @@ class FriendViewController: UITableViewController {
 
     func selectRow(at indexPath: IndexPath) {
         nameEditionCell?.textField.resignFirstResponder()
+
+        for cell in tableView.visibleCells {
+            //unchecking cells
+            cell.accessoryType = .none
+        }
+
+        selectedTimeZone = indexPath.row
+        friend.timeZone = timeZones[indexPath.row]
+
+        let selected = tableView.cellForRow(at: indexPath)
+        selected?.accessoryType = .checkmark
+
+        //for gray flash
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
