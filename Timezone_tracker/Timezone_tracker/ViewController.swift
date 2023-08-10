@@ -29,20 +29,39 @@ class ViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         let friend = friends[indexPath.row]
 
-//        cell.textLabel?.text = friend.name
-//        cell.detailTextLabel?.text = friend.timeZone.identifier
-
         // Step 1: Create a custom content configuration
         var content = cell.defaultContentConfiguration()
 
-        // Step 2: Set the primary and secondary text in the content configuration
+        // Step 2: Set the primary text in the content configuration
         content.text = friend.name
-        content.secondaryText = friend.timeZone.identifier
+
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeZone = friend.timeZone
+        dateFormatter.timeStyle = .short
+
+        // Step 2: Set the secondary text in the content configuration
+        //content.secondaryText = friend.timeZone.identifier
+        content.secondaryText = dateFormatter.string(from: Date())
 
         // Step 3: Apply the custom configuration to the cell
         cell.contentConfiguration = content
 
         return cell
+    }
+
+    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { [weak self] (_, _, completionHandler) in
+            self?.deleteFriend(at: indexPath)
+            completionHandler(true)
+        }
+
+        return UISwipeActionsConfiguration(actions: [deleteAction])
+    }
+
+    private func deleteFriend(at indexPath: IndexPath) {
+        friends.remove(at: indexPath.row)
+        tableView.deleteRows(at: [indexPath], with: .automatic)
+        saveData()
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -98,6 +117,7 @@ class ViewController: UITableViewController {
         tableView.reloadData()
         saveData()
     }
+
 
 }
 
