@@ -49,6 +49,21 @@ class ViewController: UITableViewController {
         return cell
     }
 
+    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { [weak self] (_, _, completionHandler) in
+            self?.deleteFriend(at: indexPath)
+            completionHandler(true)
+        }
+
+        return UISwipeActionsConfiguration(actions: [deleteAction])
+    }
+
+    private func deleteFriend(at indexPath: IndexPath) {
+        friends.remove(at: indexPath.row)
+        tableView.deleteRows(at: [indexPath], with: .automatic)
+        saveData()
+    }
+
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         configure(friend: friends[indexPath.row], position: indexPath.row)
     }
@@ -102,6 +117,7 @@ class ViewController: UITableViewController {
         tableView.reloadData()
         saveData()
     }
+
 
 }
 
