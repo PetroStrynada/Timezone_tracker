@@ -109,12 +109,22 @@ class FriendViewController: UITableViewController {
         if indexPath.section == 0 {
             startEditingName()
         } else {
-            selectRow(at: indexPath)
+            //selectRow(at: indexPath)
+            changeTimeZoneAlert(at: indexPath)
         }
     }
 
     func startEditingName() {
         nameEditionCell?.textField.becomeFirstResponder()
+    }
+
+    func changeTimeZoneAlert(at indexPath: IndexPath) {
+        let ac = UIAlertController(title: "Change the time zone?", message: nil, preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "Ok", style: .default) { [weak self] _ in
+            self?.selectRow(at: indexPath)
+        })
+        ac.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        present(ac, animated: true)
     }
 
     func selectRow(at indexPath: IndexPath) {
