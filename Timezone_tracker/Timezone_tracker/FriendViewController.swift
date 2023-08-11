@@ -138,7 +138,7 @@ class FriendViewController: UITableViewController {
     }
 
     func changeTimeZoneAlert(at indexPath: IndexPath) {
-        let ac = UIAlertController(title: "Change the time zone?", message: nil, preferredStyle: .alert)
+        let ac = UIAlertController(title: "Change the time zone?", message: "", preferredStyle: .alert)
         ac.addAction(UIAlertAction(title: "Ok", style: .default) { [weak self] _ in
             self?.selectRow(at: indexPath)
         })
@@ -162,6 +162,8 @@ class FriendViewController: UITableViewController {
         selected?.accessoryType = .checkmark
 
         //for gray flash
-        tableView.deselectRow(at: indexPath, animated: true)
+        //tableView.deselectRow(at: indexPath, animated: true)
+
+        tableView.reloadData()
     }
 }
