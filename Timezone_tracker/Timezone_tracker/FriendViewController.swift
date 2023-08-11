@@ -138,7 +138,11 @@ class FriendViewController: UITableViewController {
     }
 
     func changeTimeZoneAlert(at indexPath: IndexPath) {
-        let ac = UIAlertController(title: "Change the time zone?", message: "", preferredStyle: .alert)
+        let timeZone = timeZones[indexPath.row]
+        let zoneRegion = timeZone.identifier.replacingOccurrences(of: "_", with: " ")
+        let timeDifference = timeZone.secondsFromGMT(for: Date())
+
+        let ac = UIAlertController(title: "Change the time zone?", message: "\(zoneRegion)", preferredStyle: .alert)
         ac.addAction(UIAlertAction(title: "Ok", style: .default) { [weak self] _ in
             self?.selectRow(at: indexPath)
         })
@@ -166,4 +170,6 @@ class FriendViewController: UITableViewController {
 
         tableView.reloadData()
     }
+
+
 }
