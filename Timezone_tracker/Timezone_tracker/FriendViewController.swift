@@ -55,23 +55,27 @@ class FriendViewController: UITableViewController {
         friend.name = sender.text ?? ""
     }
 
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 0 {
+            return "Name your friend"
+        } else if section == 1 {
+            return "Current time zone"
+        } else {
+            return "Select their time zone"
+        }
+    }
+
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 3
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
             return 1
+        } else if section == 1 {
+            return 1
         } else {
             return timeZones.count
-        }
-    }
-
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if section == 0 {
-            return "Name your friend"
-        } else {
-            return "Select their time zone"
         }
     }
 
@@ -82,6 +86,19 @@ class FriendViewController: UITableViewController {
             }
 
             cell.textField.text = friend.name
+            return cell
+        } else if indexPath.section == 1 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CurrentTimeZone", for: indexPath)
+            let currentTimeZone = friend.timeZone
+            var content = cell.defaultContentConfiguration()
+
+            content.text = currentTimeZone.identifier.replacingOccurrences(of: "_", with: " ")
+
+            let timeDifference = currentTimeZone.secondsFromGMT(for: Date())
+            content.secondaryText = timeDifference.timeString()
+
+            cell.contentConfiguration = content
+
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "TimeZone", for: indexPath)
@@ -106,10 +123,12 @@ class FriendViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
         if indexPath.section == 0 {
             startEditingName()
+        } else if indexPath.section == 1 {
+            return
         } else {
-            //selectRow(at: indexPath)
             changeTimeZoneAlert(at: indexPath)
         }
     }
@@ -124,6 +143,7 @@ class FriendViewController: UITableViewController {
             self?.selectRow(at: indexPath)
         })
         ac.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+
         present(ac, animated: true)
     }
 
