@@ -105,7 +105,7 @@ class ViewController: UITableViewController, Storyboarded {
         coordinator?.configure(friend: friend)
     }
 
-    func updateFriend(friend: Friend) {
+    func update(friend: Friend) {
         guard let selectedFriend = selectedFriend else { return }
 
         friends[selectedFriend] = friend
