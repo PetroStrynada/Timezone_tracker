@@ -13,7 +13,7 @@ protocol Storyboarded {
 
 extension Storyboarded where Self: UIViewController {
     static func instantiate() -> Self {
-        //we named storyboard classes the same identifier their class. We can use that to find view controllers n the storyboards
+        //we named storyboard classes the same identifier their class. We can use that to find view controllers in the storyboards
         let className = String(describing: self)
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         return storyboard.instantiateViewController(withIdentifier: className) as! Self
