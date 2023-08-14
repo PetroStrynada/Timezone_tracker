@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UITableViewController {
+class ViewController: UITableViewController, Storyboarded {
     var friends = [Friend]()
     var selectedFriend: Int? = nil
 

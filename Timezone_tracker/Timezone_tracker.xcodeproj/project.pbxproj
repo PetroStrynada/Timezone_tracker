@@ -20,6 +20,9 @@
 		FB18BCC72A827CEC00DACC07 /* FriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB18BCC62A827CEC00DACC07 /* FriendViewController.swift */; };
 		FB18BCC92A82848800DACC07 /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB18BCC82A82848800DACC07 /* TextTableViewCell.swift */; };
 		FB8337C72A83DEB6001B8C14 /* Int-TimeFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8337C62A83DEB6001B8C14 /* Int-TimeFormatting.swift */; };
+		FBB4BDC32A8A5269006E4F4A /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB4BDC22A8A5269006E4F4A /* Coordinator.swift */; };
+		FBB4BDC52A8A5391006E4F4A /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB4BDC42A8A5391006E4F4A /* MainCoordinator.swift */; };
+		FBB4BDC72A8A54E2006E4F4A /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB4BDC62A8A54E2006E4F4A /* Storyboarded.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,9 @@
 		FB18BCC62A827CEC00DACC07 /* FriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendViewController.swift; sourceTree = "<group>"; };
 		FB18BCC82A82848800DACC07 /* TextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
 		FB8337C62A83DEB6001B8C14 /* Int-TimeFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int-TimeFormatting.swift"; sourceTree = "<group>"; };
+		FBB4BDC22A8A5269006E4F4A /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		FBB4BDC42A8A5391006E4F4A /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		FBB4BDC62A8A54E2006E4F4A /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +115,9 @@
 			children = (
 				FB18BC942A824B3A00DACC07 /* AppDelegate.swift */,
 				FB18BC962A824B3A00DACC07 /* SceneDelegate.swift */,
+				FBB4BDC22A8A5269006E4F4A /* Coordinator.swift */,
+				FBB4BDC42A8A5391006E4F4A /* MainCoordinator.swift */,
+				FBB4BDC62A8A54E2006E4F4A /* Storyboarded.swift */,
 				FB18BC982A824B3A00DACC07 /* ViewController.swift */,
 				FB18BCC62A827CEC00DACC07 /* FriendViewController.swift */,
 				FB8337C62A83DEB6001B8C14 /* Int-TimeFormatting.swift */,
@@ -270,12 +279,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBB4BDC32A8A5269006E4F4A /* Coordinator.swift in Sources */,
 				FB18BCC92A82848800DACC07 /* TextTableViewCell.swift in Sources */,
 				FB18BC992A824B3A00DACC07 /* ViewController.swift in Sources */,
 				FB18BC952A824B3A00DACC07 /* AppDelegate.swift in Sources */,
 				FB18BC972A824B3A00DACC07 /* SceneDelegate.swift in Sources */,
 				FB18BCC52A82704800DACC07 /* Friend.swift in Sources */,
 				FB18BCC72A827CEC00DACC07 /* FriendViewController.swift in Sources */,
+				FBB4BDC72A8A54E2006E4F4A /* Storyboarded.swift in Sources */,
+				FBB4BDC52A8A5391006E4F4A /* MainCoordinator.swift in Sources */,
 				FB8337C72A83DEB6001B8C14 /* Int-TimeFormatting.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
