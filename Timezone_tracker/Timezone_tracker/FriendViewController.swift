@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FriendViewController: UITableViewController, Storyboarded {
+class FriendViewController: UITableViewController, Storyboarded, CoordinatedFriend {
     weak var coordinator: MainCoordinator?
     var friend: Friend!
 
@@ -55,6 +55,10 @@ class FriendViewController: UITableViewController, Storyboarded {
         friend.name = sender.text ?? ""
     }
 
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 3
+    }
+
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if section == 0 {
             return "Name your friend"
@@ -63,10 +67,6 @@ class FriendViewController: UITableViewController, Storyboarded {
         } else {
             return "Select their time zone"
         }
-    }
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -127,7 +127,9 @@ class FriendViewController: UITableViewController, Storyboarded {
         if indexPath.section == 0 {
             startEditingName()
         } else if indexPath.section == 1 {
-            return
+            // Open the TimeZoneViewController when "Current time zone" section is selected
+            //coordinator?.showTimeZoneViewController(for: friend)
+            coordinator?.showViewController(TimeZoneViewController.self, for: friend)
         } else {
             changeTimeZoneAlert(at: indexPath)
         }
@@ -165,11 +167,6 @@ class FriendViewController: UITableViewController, Storyboarded {
         let selected = tableView.cellForRow(at: indexPath)
         selected?.accessoryType = .checkmark
 
-        //for gray flash
-        //tableView.deselectRow(at: indexPath, animated: true)
-
         tableView.reloadData()
     }
-
-
 }
