@@ -18,7 +18,9 @@ class ViewController: UITableViewController, Storyboarded {
         // Register the cell class or nib here
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
 
-        loadData()
+        if let savedFriends: [Friend] = coordinator?.loadData(forKey: "Friends") {
+            friends = savedFriends
+        }
 
         title = "Friend Zone"
 
@@ -30,20 +32,26 @@ class ViewController: UITableViewController, Storyboarded {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        var cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         let friend = friends[indexPath.row]
+
+        // Configure the cell style to "Right Detail"
+        cell = UITableViewCell(style: .value1, reuseIdentifier: "Cell")
+
+        // Chevron at right side
+        cell.accessoryType = .disclosureIndicator
 
         // Step 1: Create a custom content configuration
         var content = cell.defaultContentConfiguration()
 
-        // Step 2: Set the primary text in the content configuration
+        // Step 2.1: Set the primary text in the content configuration
         content.text = friend.name
 
         let dateFormatter = DateFormatter()
         dateFormatter.timeZone = friend.timeZone
         dateFormatter.timeStyle = .short
 
-        // Step 2: Set the secondary text in the content configuration
+        // Step 2.2: Set the secondary text in the content configuration
         //content.secondaryText = friend.timeZone.identifier
         content.secondaryText = dateFormatter.string(from: Date())
 
@@ -65,44 +73,46 @@ class ViewController: UITableViewController, Storyboarded {
     private func deleteFriend(at indexPath: IndexPath) {
         friends.remove(at: indexPath.row)
         tableView.deleteRows(at: [indexPath], with: .automatic)
-        saveData()
+        coordinator?.saveData(friends, forKey: "Friends", errorMessage: "Unable to encode friends data.")
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedFriend = indexPath.row
-        coordinator?.configure(friend: friends[indexPath.row])
+        //coordinator?.showConfigure(for: friends[indexPath.row])
+        coordinator?.showViewController(FriendViewController.self, for: friends[indexPath.row])
     }
 
-    func loadData() {
-        let defaults = UserDefaults.standard
-        guard let saveData = defaults.data(forKey: "Friends") else { return }
-
-        let decoder = JSONDecoder()
-        guard let saveFriends = try? decoder.decode([Friend].self, from: saveData) else { return }
-
-        friends = saveFriends
-    }
-
-    func saveData() {
-        let defaults = UserDefaults.standard
-        let encoder = JSONEncoder()
-
-        guard let saveData = try? encoder.encode(friends) else {
-            fatalError("Unable to encode friends data.")
-        }
-
-        defaults.set(saveData, forKey: "Friends")
-
-    }
+//    func loadData() {
+//        let defaults = UserDefaults.standard
+//        guard let saveData = defaults.data(forKey: "Friends") else { return }
+//
+//        let decoder = JSONDecoder()
+//        guard let saveFriends = try? decoder.decode([Friend].self, from: saveData) else { return }
+//
+//        friends = saveFriends
+//    }
+//
+//    func saveData() {
+//        let defaults = UserDefaults.standard
+//        let encoder = JSONEncoder()
+//
+//        guard let saveData = try? encoder.encode(friends) else {
+//            fatalError("Unable to encode friends data.")
+//        }
+//
+//        defaults.set(saveData, forKey: "Friends")
+//
+//    }
 
     @objc func addFriend() {
         let friend = Friend()
         friends.append(friend)
         tableView.insertRows(at: [IndexPath(row: friends.count - 1, section: 0)], with: .automatic)
-        saveData()
+        coordinator?.saveData(friends, forKey: "Friends", errorMessage: "Unable to encode friends data.")
 
         selectedFriend = friends.count - 1
-        coordinator?.configure(friend: friend)
+        //coordinator?.showConfigure(for: friend)
+        coordinator?.showViewController(FriendViewController.self, for: friend)
     }
 
     func update(friend: Friend) {
@@ -110,7 +120,7 @@ class ViewController: UITableViewController, Storyboarded {
 
         friends[selectedFriend] = friend
         tableView.reloadData()
-        saveData()
+        coordinator?.saveData(friends, forKey: "Friends", errorMessage: "Unable to encode friends data.")
     }
 
 
