@@ -41,10 +41,10 @@ class TimeZoneViewController: UITableViewController, Storyboarded, CoordinatedFr
         selectedTimeZone = timeZones.firstIndex(of: friend.timeZone) ?? 0
     }
 
-    //Потрібно оновити таймзону друга після того як вʼю зникне
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        coordinator?.update(friend: friend)
+        coordinator?.updateViewController(friend: friend)
+        coordinator?.updateFriendViewController(friend: friend)
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -87,6 +87,7 @@ class TimeZoneViewController: UITableViewController, Storyboarded, CoordinatedFr
     func changeTimeZoneAlert(at indexPath: IndexPath) {
         let timeZone = timeZones[indexPath.row]
         let regionZone = timeZone.identifier.replacingOccurrences(of: "_", with: " ")
+        
         let timeDifference = timeZone.secondsFromGMT(for: Date())
 
         let ac = UIAlertController(title: "Change the time zone?", message: "\(regionZone)", preferredStyle: .alert)
@@ -100,8 +101,8 @@ class TimeZoneViewController: UITableViewController, Storyboarded, CoordinatedFr
 
     func selectRow(at indexPath: IndexPath) {
 
+        //unchecking cells
         for cell in tableView.visibleCells {
-            //unchecking cells
             cell.accessoryType = .none
         }
 

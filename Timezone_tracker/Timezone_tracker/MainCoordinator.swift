@@ -28,26 +28,25 @@ class MainCoordinator: Coordinator {
         navigationController.pushViewController(vc, animated: true)
     }
 
-//    func showConfigure(for friend: Friend) {
-//        let vc = FriendViewController.instantiate()
-//        vc.coordinator = self
-//        vc.friend = friend
-//        navigationController.pushViewController(vc, animated: true)
-//    }
-//
-//    func showTimeZoneViewController(for friend: Friend) {
-//        let vc = TimeZoneViewController.instantiate()
-//        vc.coordinator = self
-//        vc.friend = friend
-//        navigationController.pushViewController(vc, animated: true)
-//    }
-
-    func update(friend: Friend) {
-        guard let vc = navigationController.viewControllers.first as? ViewController else {
+    func updateViewController(friend: Friend) {
+        guard let vc = navigationController.viewControllers.first(where: { $0 is ViewController }) as? ViewController else {
             return
         }
 
-        vc.update(friend: friend)
+        if let selectedFriend = vc.selectedFriend {
+            vc.friends[selectedFriend] = friend
+            vc.tableView.reloadData()
+            saveData(vc.friends, forKey: "Friends", errorMessage: "Unable to encode friends data.")
+        }
+    }
+
+    func updateFriendViewController(friend: Friend) {
+        guard let vc = navigationController.viewControllers.first(where: { $0 is FriendViewController }) as? FriendViewController else {
+            return
+        }
+
+        vc.friend.timeZone = friend.timeZone
+        vc.tableView.reloadData()
     }
 
     func loadData<T: Decodable>(forKey key: String) -> T? {

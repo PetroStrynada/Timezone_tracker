@@ -78,31 +78,8 @@ class ViewController: UITableViewController, Storyboarded {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedFriend = indexPath.row
-        //coordinator?.showConfigure(for: friends[indexPath.row])
         coordinator?.showViewController(FriendViewController.self, for: friends[indexPath.row])
     }
-
-//    func loadData() {
-//        let defaults = UserDefaults.standard
-//        guard let saveData = defaults.data(forKey: "Friends") else { return }
-//
-//        let decoder = JSONDecoder()
-//        guard let saveFriends = try? decoder.decode([Friend].self, from: saveData) else { return }
-//
-//        friends = saveFriends
-//    }
-//
-//    func saveData() {
-//        let defaults = UserDefaults.standard
-//        let encoder = JSONEncoder()
-//
-//        guard let saveData = try? encoder.encode(friends) else {
-//            fatalError("Unable to encode friends data.")
-//        }
-//
-//        defaults.set(saveData, forKey: "Friends")
-//
-//    }
 
     @objc func addFriend() {
         let friend = Friend()
@@ -111,11 +88,10 @@ class ViewController: UITableViewController, Storyboarded {
         coordinator?.saveData(friends, forKey: "Friends", errorMessage: "Unable to encode friends data.")
 
         selectedFriend = friends.count - 1
-        //coordinator?.showConfigure(for: friend)
         coordinator?.showViewController(FriendViewController.self, for: friend)
     }
 
-    func update(friend: Friend) {
+    func updateViewController(friend: Friend) {
         guard let selectedFriend = selectedFriend else { return }
 
         friends[selectedFriend] = friend
