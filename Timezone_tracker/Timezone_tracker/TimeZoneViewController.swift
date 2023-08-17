@@ -41,12 +41,6 @@ class TimeZoneViewController: UITableViewController, Storyboarded, CoordinatedFr
         selectedTimeZone = timeZones.firstIndex(of: friend.timeZone) ?? 0
     }
 
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        coordinator?.updateViewController(friend: friend)
-        coordinator?.updateFriendViewController(friend: friend)
-    }
-
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -60,7 +54,7 @@ class TimeZoneViewController: UITableViewController, Storyboarded, CoordinatedFr
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TimeZone2", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TimeZone", for: indexPath)
         let timeZone = timeZones[indexPath.row]
         var content = cell.defaultContentConfiguration()
 
@@ -112,8 +106,8 @@ class TimeZoneViewController: UITableViewController, Storyboarded, CoordinatedFr
         let selected = tableView.cellForRow(at: indexPath)
         selected?.accessoryType = .checkmark
 
-        //for gray flash. storyboard -> selection -> default
-        //tableView.deselectRow(at: indexPath, animated: true)
+        coordinator?.updateViewController(friend: friend)
+        coordinator?.updateFriendViewController(friend: friend)
 
         tableView.reloadData()
     }
