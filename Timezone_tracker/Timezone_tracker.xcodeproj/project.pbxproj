@@ -9,8 +9,7 @@
 /* Begin PBXBuildFile section */
 		FB18BC952A824B3A00DACC07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB18BC942A824B3A00DACC07 /* AppDelegate.swift */; };
 		FB18BC972A824B3A00DACC07 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB18BC962A824B3A00DACC07 /* SceneDelegate.swift */; };
-		FB18BC992A824B3A00DACC07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB18BC982A824B3A00DACC07 /* ViewController.swift */; };
-		FB18BC9C2A824B3A00DACC07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB18BC9A2A824B3A00DACC07 /* Main.storyboard */; };
+		FB18BC9C2A824B3A00DACC07 /* FriendZoneViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB18BC9A2A824B3A00DACC07 /* FriendZoneViewController.storyboard */; };
 		FB18BC9E2A824B3C00DACC07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB18BC9D2A824B3C00DACC07 /* Assets.xcassets */; };
 		FB18BCA12A824B3C00DACC07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB18BC9F2A824B3C00DACC07 /* LaunchScreen.storyboard */; };
 		FB18BCAC2A824B3D00DACC07 /* Timezone_trackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB18BCAB2A824B3D00DACC07 /* Timezone_trackerTests.swift */; };
@@ -21,6 +20,11 @@
 		FB18BCC92A82848800DACC07 /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB18BCC82A82848800DACC07 /* TextTableViewCell.swift */; };
 		FB29EB122A8D0C9300F5C783 /* CoordinatedFriend.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB29EB112A8D0C9300F5C783 /* CoordinatedFriend.swift */; };
 		FB5F67A72A8AB0B800BC1E6B /* TimeZoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5F67A62A8AB0B800BC1E6B /* TimeZoneViewController.swift */; };
+		FB72A2452A9109C700A5569B /* FriendZoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB72A2442A9109C700A5569B /* FriendZoneViewController.swift */; };
+		FB72A2492A910A4A00A5569B /* FriendZoneTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB72A2472A910A4A00A5569B /* FriendZoneTableViewCell.swift */; };
+		FB72A24A2A910A4A00A5569B /* FriendZoneTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB72A2482A910A4A00A5569B /* FriendZoneTableViewCell.xib */; };
+		FB72A24C2A91106C00A5569B /* FriendViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB72A24B2A91106C00A5569B /* FriendViewController.storyboard */; };
+		FB72A24E2A9110FE00A5569B /* TimeZoneViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB72A24D2A9110FE00A5569B /* TimeZoneViewController.storyboard */; };
 		FB8337C72A83DEB6001B8C14 /* Int-TimeFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8337C62A83DEB6001B8C14 /* Int-TimeFormatting.swift */; };
 		FBB4BDC32A8A5269006E4F4A /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB4BDC22A8A5269006E4F4A /* Coordinator.swift */; };
 		FBB4BDC52A8A5391006E4F4A /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB4BDC42A8A5391006E4F4A /* MainCoordinator.swift */; };
@@ -48,8 +52,7 @@
 		FB18BC912A824B3A00DACC07 /* Timezone_tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Timezone_tracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB18BC942A824B3A00DACC07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB18BC962A824B3A00DACC07 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FB18BC982A824B3A00DACC07 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FB18BC9B2A824B3A00DACC07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FB18BC9B2A824B3A00DACC07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/FriendZoneViewController.storyboard; sourceTree = "<group>"; };
 		FB18BC9D2A824B3C00DACC07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB18BCA02A824B3C00DACC07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FB18BCA22A824B3C00DACC07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -63,6 +66,11 @@
 		FB18BCC82A82848800DACC07 /* TextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
 		FB29EB112A8D0C9300F5C783 /* CoordinatedFriend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatedFriend.swift; sourceTree = "<group>"; };
 		FB5F67A62A8AB0B800BC1E6B /* TimeZoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeZoneViewController.swift; sourceTree = "<group>"; };
+		FB72A2442A9109C700A5569B /* FriendZoneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendZoneViewController.swift; sourceTree = "<group>"; };
+		FB72A2472A910A4A00A5569B /* FriendZoneTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendZoneTableViewCell.swift; sourceTree = "<group>"; };
+		FB72A2482A910A4A00A5569B /* FriendZoneTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendZoneTableViewCell.xib; sourceTree = "<group>"; };
+		FB72A24B2A91106C00A5569B /* FriendViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FriendViewController.storyboard; sourceTree = "<group>"; };
+		FB72A24D2A9110FE00A5569B /* TimeZoneViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TimeZoneViewController.storyboard; sourceTree = "<group>"; };
 		FB8337C62A83DEB6001B8C14 /* Int-TimeFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int-TimeFormatting.swift"; sourceTree = "<group>"; };
 		FBB4BDC22A8A5269006E4F4A /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		FBB4BDC42A8A5391006E4F4A /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
@@ -119,17 +127,13 @@
 			children = (
 				FB18BC942A824B3A00DACC07 /* AppDelegate.swift */,
 				FB18BC962A824B3A00DACC07 /* SceneDelegate.swift */,
+				FB72A2362A90EE2E00A5569B /* Screens */,
+				FB72A2372A90EE5000A5569B /* Models */,
+				FB72A23E2A90F0E800A5569B /* Common */,
 				FBB4BDC22A8A5269006E4F4A /* Coordinator.swift */,
-				FBB4BDC42A8A5391006E4F4A /* MainCoordinator.swift */,
 				FBB4BDC62A8A54E2006E4F4A /* Storyboarded.swift */,
 				FB29EB112A8D0C9300F5C783 /* CoordinatedFriend.swift */,
-				FB18BC982A824B3A00DACC07 /* ViewController.swift */,
-				FB18BCC62A827CEC00DACC07 /* FriendViewController.swift */,
-				FB5F67A62A8AB0B800BC1E6B /* TimeZoneViewController.swift */,
-				FB8337C62A83DEB6001B8C14 /* Int-TimeFormatting.swift */,
-				FB18BCC42A82704800DACC07 /* Friend.swift */,
-				FB18BCC82A82848800DACC07 /* TextTableViewCell.swift */,
-				FB18BC9A2A824B3A00DACC07 /* Main.storyboard */,
+				FBB4BDC42A8A5391006E4F4A /* MainCoordinator.swift */,
 				FB18BC9D2A824B3C00DACC07 /* Assets.xcassets */,
 				FB18BC9F2A824B3C00DACC07 /* LaunchScreen.storyboard */,
 				FB18BCA22A824B3C00DACC07 /* Info.plist */,
@@ -152,6 +156,110 @@
 				FB18BCB72A824B3D00DACC07 /* Timezone_trackerUITestsLaunchTests.swift */,
 			);
 			path = Timezone_trackerUITests;
+			sourceTree = "<group>";
+		};
+		FB72A2362A90EE2E00A5569B /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				FB72A2382A90EF4900A5569B /* FriendZone */,
+				FB72A2392A90EF7100A5569B /* FriendConfigurations */,
+				FB72A23A2A90EFC300A5569B /* TimeZoneConfigurations */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		FB72A2372A90EE5000A5569B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FB18BCC42A82704800DACC07 /* Friend.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FB72A2382A90EF4900A5569B /* FriendZone */ = {
+			isa = PBXGroup;
+			children = (
+				FB72A2442A9109C700A5569B /* FriendZoneViewController.swift */,
+				FB18BC9A2A824B3A00DACC07 /* FriendZoneViewController.storyboard */,
+				FB72A2462A910A0500A5569B /* Views */,
+			);
+			path = FriendZone;
+			sourceTree = "<group>";
+		};
+		FB72A2392A90EF7100A5569B /* FriendConfigurations */ = {
+			isa = PBXGroup;
+			children = (
+				FB18BCC62A827CEC00DACC07 /* FriendViewController.swift */,
+				FB72A24B2A91106C00A5569B /* FriendViewController.storyboard */,
+				FB72A23C2A90F0A400A5569B /* Views */,
+			);
+			path = FriendConfigurations;
+			sourceTree = "<group>";
+		};
+		FB72A23A2A90EFC300A5569B /* TimeZoneConfigurations */ = {
+			isa = PBXGroup;
+			children = (
+				FB5F67A62A8AB0B800BC1E6B /* TimeZoneViewController.swift */,
+				FB72A24D2A9110FE00A5569B /* TimeZoneViewController.storyboard */,
+				FB72A23D2A90F0AA00A5569B /* Views */,
+			);
+			path = TimeZoneConfigurations;
+			sourceTree = "<group>";
+		};
+		FB72A23C2A90F0A400A5569B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FB18BCC82A82848800DACC07 /* TextTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FB72A23D2A90F0AA00A5569B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FB72A23E2A90F0E800A5569B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				FB72A23F2A90F11F00A5569B /* Extensions */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		FB72A23F2A90F11F00A5569B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FB72A2402A90F13C00A5569B /* Core */,
+				FB72A2412A90F14D00A5569B /* UI */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FB72A2402A90F13C00A5569B /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				FB8337C62A83DEB6001B8C14 /* Int-TimeFormatting.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		FB72A2412A90F14D00A5569B /* UI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		FB72A2462A910A0500A5569B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FB72A2472A910A4A00A5569B /* FriendZoneTableViewCell.swift */,
+				FB72A2482A910A4A00A5569B /* FriendZoneTableViewCell.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +366,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB72A24E2A9110FE00A5569B /* TimeZoneViewController.storyboard in Resources */,
 				FB18BCA12A824B3C00DACC07 /* LaunchScreen.storyboard in Resources */,
 				FB18BC9E2A824B3C00DACC07 /* Assets.xcassets in Resources */,
-				FB18BC9C2A824B3A00DACC07 /* Main.storyboard in Resources */,
+				FB72A24C2A91106C00A5569B /* FriendViewController.storyboard in Resources */,
+				FB18BC9C2A824B3A00DACC07 /* FriendZoneViewController.storyboard in Resources */,
+				FB72A24A2A910A4A00A5569B /* FriendZoneTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,12 +398,13 @@
 			files = (
 				FBB4BDC32A8A5269006E4F4A /* Coordinator.swift in Sources */,
 				FB18BCC92A82848800DACC07 /* TextTableViewCell.swift in Sources */,
-				FB18BC992A824B3A00DACC07 /* ViewController.swift in Sources */,
 				FB18BC952A824B3A00DACC07 /* AppDelegate.swift in Sources */,
 				FB5F67A72A8AB0B800BC1E6B /* TimeZoneViewController.swift in Sources */,
 				FB18BC972A824B3A00DACC07 /* SceneDelegate.swift in Sources */,
 				FB18BCC52A82704800DACC07 /* Friend.swift in Sources */,
+				FB72A2452A9109C700A5569B /* FriendZoneViewController.swift in Sources */,
 				FB18BCC72A827CEC00DACC07 /* FriendViewController.swift in Sources */,
+				FB72A2492A910A4A00A5569B /* FriendZoneTableViewCell.swift in Sources */,
 				FBB4BDC72A8A54E2006E4F4A /* Storyboarded.swift in Sources */,
 				FBB4BDC52A8A5391006E4F4A /* MainCoordinator.swift in Sources */,
 				FB29EB122A8D0C9300F5C783 /* CoordinatedFriend.swift in Sources */,
@@ -333,12 +445,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		FB18BC9A2A824B3A00DACC07 /* Main.storyboard */ = {
+		FB18BC9A2A824B3A00DACC07 /* FriendZoneViewController.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				FB18BC9B2A824B3A00DACC07 /* Base */,
 			);
-			name = Main.storyboard;
+			name = FriendZoneViewController.storyboard;
 			sourceTree = "<group>";
 		};
 		FB18BC9F2A824B3C00DACC07 /* LaunchScreen.storyboard */ = {
@@ -478,7 +590,6 @@
 				INFOPLIST_FILE = Timezone_tracker/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -506,7 +617,6 @@
 				INFOPLIST_FILE = Timezone_tracker/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

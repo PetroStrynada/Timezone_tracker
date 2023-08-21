@@ -16,7 +16,7 @@ class MainCoordinator: Coordinator {
     }
 
     func start() {
-        let vc = ViewController.instantiate()
+        let vc = FriendZoneViewController.instantiate()
         vc.coordinator = self
         navigationController.pushViewController(vc, animated: false)
     }
@@ -24,12 +24,13 @@ class MainCoordinator: Coordinator {
     func showViewController<T: UIViewController & Storyboarded & CoordinatedFriend>(_ viewControllerType: T.Type, for friend: Friend) {
         var vc = viewControllerType.instantiate()
         vc.coordinator = self
+        //TODO: напевно це треба в delegate
         vc.friend = friend
         navigationController.pushViewController(vc, animated: true)
     }
 
     func updateViewController(friend: Friend) {
-        guard let vc = navigationController.viewControllers.first(where: { $0 is ViewController }) as? ViewController else {
+        guard let vc = navigationController.viewControllers.first(where: { $0 is FriendZoneViewController }) as? FriendZoneViewController else {
             return
         }
 
@@ -49,6 +50,7 @@ class MainCoordinator: Coordinator {
         vc.tableView.reloadData()
     }
 
+    //TODO: loadData and saveData should be take to another class
     func loadData<T: Decodable>(forKey key: String) -> T? {
         let defaults = UserDefaults.standard
         guard let saveData = defaults.data(forKey: key) else { return nil }
